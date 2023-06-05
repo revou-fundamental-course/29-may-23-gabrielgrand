@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>Gunadarma</title>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <section class="sub-header">
+    <nav>
+      <a href="index.html"><img src="images/logo_revou.png"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="profile.html">OUR PROFILE</a></li>
+          <li><a href="#porto">PORTOFOLIO</a></li>
+          <li><a href="#messages">MESSAGE US</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>About Us</h1>
+  </section>
+
+<!---------- About Us content ---------->
+
+<section class="about-us">
+  <div class="row">
+    <div class="about-col">
+      <h1>We Are The World's Largest Live Online Learning Community</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="" class="hero-btn red-btn">Explore Now</a>
+    </div>
+    <div class="about-col">
+      <img src="images/about1.png">
+    </div>
+  </div>
+</section>
+
+<!---------- Course ---------->
+
+<section class="course">
+  <h1>Courses We Offer</h1>
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+  <div class="row">
+    <div class="course-col">
+      <h3>Beginner</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+    </div>
+    <div class="course-col">
+      <h3>Intermediate</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+    </div>
+    <div class="course-col">
+      <h3>Advanced</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+    </div>
+  </div>
+</section>
+
+<!---------- Facilities ---------->
+
+<section class="facilities">
+  <h1>Our Facilities</h1>
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+  <div class="row">
+    <div class="facilities-col">
+      <img src="images/mentor1.jpg">
+      <h3>Projects with personalized mentor</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pellentesque aliquet turpis nulla.</p>
+    </div>
+    <div class="facilities-col">
+      <img src="images/mentor2.jpg">
+      <h3>Career support training</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pellentesque aliquet turpis nulla.</p>
+    </div>
+    <div class="facilities-col">
+      <img src="images/mentor3.jpg">
+      <h3>Career Mentors</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pellentesque aliquet turpis nulla.</p>
+    </div>
+  </div>
+</section>
+
+<!---------- testimonials ---------->
+<section class="testimonials">
+  <h1>What Our Student Says</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+  <div class="row">
+    <div class="testimonial-col">
+      <img src="images/user1.jpg">
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+      </div>
+    </div>
+    <div class="testimonial-col">
+      <img src="images/user2.jpg">
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h3>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!---------- footer ---------->
+
+<section class="footer">
+  <p>Created by RevoU</p>
+</section>
+
+
+<!----------JavaScript for Toggle Menu---------->
+  <script type="">
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+     function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,58 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title></title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>RevoU</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-	<section>
-		<header>
-			<a href="#"><img src="logo.png" class="logo"></a>
-			<div class="toggle"></div>
-			<ul class="navigation">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Menu</a></li>
-				<li><a href="#">What's New</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><span class="themeSwitch"></span></li>
-			</ul>
-		</header>
-		<div class="content">
-			<div class="textBox">
-				<h2>It's not just Coffee<br>It's<span> Starbucks</span></h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor inculpa qui officia deserunt mollit anim id est parodum.</p>
-				<a href="#">Learn More</a>
-			</div>
-			<div class="imgBox">
-				<img src="img1.png" class="starbucks">
-			</div>
-		</div>
-		<ul class="sci">
-			<li ><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-			<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-			<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-		</ul>
-	</section>
+<body id="home">
+    
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo_revou.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="profile.html">OUR PROFILE</a></li>
+                    <li><a href="#porto">PORTOFOLIO</a></li>
+                    <li><a href="#messages">MESSAGE US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+        <div class="text-box">
+            <h1>Hai <span id="nama"></span>, Welcome To My Website</h1>
+            <p>Making website is now one of the easieser thing in the world. You just need to learn HTML, CSS,<br>Javascript and you are good to go</p>
+            <a href="profile.html" class="hero-btn">Visit Us To Know More</a>
+        </div>
+    </section>
 
-	<script type="">
-		let themeSwitch = document.querySelector('.themeSwitch');
-		let body = document.querySelector('body');
-		themeSwitch.onclick = function(){
-			themeSwitch.classList.toggle('active');
-			body.classList.toggle('dark');
-		}
+<!---------- Head Quarter ---------->
 
-		let menutoggle = document.querySelector('.toggle');
-		let navigation = document.querySelector('.navigation');
-		menutoggle.onclick = function(){
-			menutoggle.classList.toggle('active')
-			navigation.classList.toggle('active')
-		}
-	</script>
+    <section class="head" id="head">
+        <h1>Our Head Quarter</h1>
+        <div class="row">
+            <div class="head-col">
+                <img src="images/london.png">
+                <div class="layer">
+                    <h3>Jakarta</h3>
+                </div>
+            </div>
+            <div class="head-col">
+                <img src="images/newyork.png">
+                <div class="layer">
+                    <h3>Bandung</h3>
+                </div>
+            </div>
+            <div class="head-col">
+                <img src="images/washington.png">
+                <div class="layer">
+                    <h3>Surabaya</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!---------- Message ---------->
+    <section class="message" id="messages">
+        <h1>Message US</h1>
+        <div class="row">
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="form">
+            <h2>Form</h2>
+            <form name="message-form" onsubmit="return validateForm()">
+                <label for="name">
+                    <span>Name:</span>    
+                    <input type="text" name="full-name" placeholder="Enter your name">
+                </label>  
+                <label for="dob">
+                    <span>Date of Birth:</span>
+                    <input type="date" id="dob" name="dob">
+                </label>
+                <label for="gender">
+                    <span>Gender:</span>
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="Male">  &nbsp; Male
+                    </label> &nbsp;&nbsp;
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="Female">  &nbsp; Female
+                    </label>
+                </label>
+                
+                <label for="message">
+                    <span>Message:</span>
+                    <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+                </label>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="result">
+            <p><strong>Current Time:</strong> <span id="result-time"></span></p>
+            <div class="row">
+            </div>
+            <p><strong>Name:</strong> <span id="result-name"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="result-dob"></span></p>
+            <p><strong>Gender:</strong> <span id="result-gender"></span></p>
+            <p><strong>Message:</strong> <span id="result-message"></span></p>  
+        </div>
+    </div>
+
+<!---------- footer ---------->
+
+    <section class="footer">
+        <p>Created by RevoU</p>
+    </section>
+
+<!----------JavaScript Awal---------->
+    <script>
+    var name = prompt("Masukkan Nama Kamu");
+    document.getElementById("nama").innerText = name;
+    </script>
+
+<!----------JavaScript Form---------->
+    <script>
+        function validateForm() {
+            var name =document.forms["message-form"]["full-name"].value;
+            var dob =document.forms["message-form"]["dob"].value;
+            var gender =document.forms["message-form"]["gender"].value;
+            var message =document.forms["message-form"]["message"].value;
+
+            if (name == "" || dob == "" || gender == "" || message == "") {
+                alert("Input Tidak Boleh Kosong");
+                return false;
+            }
+
+            document.getElementById("result-name").innerText = name;
+            document.getElementById("result-dob").innerText = dob;
+            document.getElementById("result-gender").innerText = gender;
+            document.getElementById("result-message").innerText = message;
+
+            var currentTime = new Date();
+            var day = currentTime.toLocaleString('en-us', { weekday: 'long' });
+            var date = currentTime.toLocaleString('en-us', { day: 'numeric', month: 'long', year: 'numeric' });
+            var time = currentTime.toLocaleString('en-us', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+
+            document.getElementById('result-time').textContent = day + ', ' + date + ' - ' + time;
+            
+            return false;
+        }
+    </script>
+
 </body>
 </html>
